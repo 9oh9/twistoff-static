@@ -1,22 +1,13 @@
-<section layout="column" flex="90" layout-align="center center">
-  <h1 style="font-family: 'Patua One', cursive;" class="md-display-3">this was my jam.</h1>
-  <div>
-    <md-card style="" class="md-whiteframe-z1 md-hue-2">
-      <md-card-content layout-padding layout="row" layout-sm="column">
-        <md-input-container style="width:100px; margin-right:5px; margin-left:5px;">
-          <label>Birth Month</label>
-          <input type="number" ng-model="h.birthdate.month" min="1" max="12">
-        </md-input-container>
-        <md-input-container style="width:90px; margin-right:5px; margin-left:5px;">
-          <label>Birth Day</label>
-          <input type="number" ng-model="h.birthdate.day" min="1" max="31">
-        </md-input-container>
-        <md-input-container style="width:90px; margin-right:5px; margin-left:5px;">
-          <label>Birth Year</label>
-          <input type="number" ng-model="h.birthdate.year" min="1930" max="2015">
-        </md-input-container>
-        <md-button md-no-ink style="width:auto;" class="md-raised md-primary" ng-click="h.play()">Listen</md-button>
-      </md-card-content>
-    </md-card>
-  </div>
-</section>
+<md-grid-list
+  md-cols-sm="1" md-cols-md="2" md-cols-gt-md="6"
+  md-row-height-gt-md="1:1" md-row-height="4:3"
+  md-gutter="8px" md-gutter-gt-sm="4px" >
+  <md-grid-tile ng-repeat="tile in vm.tiles"
+      md-rowspan="{{tile.span.row}}"
+      md-colspan="{{tile.span.col}}"
+      md-colspan-sm="1"
+      ng-class="tile.background" >
+    <md-icon md-svg-icon="{{tile.icon}}"></md-icon>
+    <md-grid-tile-footer><h3>{{tile.title}}</h3></md-grid-tile-footer>
+  </md-grid-tile>
+</md-grid-list>

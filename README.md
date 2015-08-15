@@ -1,2 +1,2 @@
-# twmj-static
-Angular front end for thiswasmyj.am
+# twistoff-static
+Static site for twistoff.

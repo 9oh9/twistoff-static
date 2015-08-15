@@ -1,32 +1,18 @@
 
 class HomeCtrl {
     constructor($http, $state){
-        this.birthdate = {
-            day: undefined,
-            month: undefined,
-            year: undefined
-        };
+
+        this.grams = [];
+        this.sounds = [];
+        this.items = [];
 
         this.$state = $state;
     }
 
-    play(){
-        this.$state.go('player');
-    }
+    _merge(){}
+
 }
 HomeCtrl.$inject = ['$http', '$state'];
-
-class PlayerCtrl {
-    constructor($scope){
-        this.songQueue = [];
-        this.songService = null;
-        this.currentSong = 'RubBzkZzpUA';
-
-        $scope.$on('youtube.player.ready', ($event, player) => {
-            player.playVideo();
-        });
-
-    }
 
 //    pop(){
 //        item = this.songQueue.shift();
@@ -53,16 +39,5 @@ class PlayerCtrl {
 //    }
 
 }
-PlayerCtrl.$inject = ['$scope'];
 
-class ListenCtrl {
-    constructor($scope){
-        this.birthdate = {
-            day: undefined,
-            month: undefined,
-            year: undefined
-        };
-    }
-}
-
-export { HomeCtrl, PlayerCtrl };
+export { HomeCtrl };

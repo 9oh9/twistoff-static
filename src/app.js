@@ -28,7 +28,7 @@ angular.module('twmj', ['ngMaterial', 'ui.router', 'youtube-embed'])
         $locationProvider.hashPrefix('!');
 
         $mdThemingProvider.theme('default')
-            .primaryPalette('blue')
+            .primaryPalette('grey')
             .accentPalette('green')
             .warnPalette('red')
             .backgroundPalette('grey');
