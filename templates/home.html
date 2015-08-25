@@ -1,13 +1,23 @@
-<md-grid-list
-  md-cols-sm="1" md-cols-md="2" md-cols-gt-md="6"
-  md-row-height-gt-md="1:1" md-row-height="4:3"
-  md-gutter="8px" md-gutter-gt-sm="4px" >
-  <md-grid-tile ng-repeat="tile in vm.tiles"
-      md-rowspan="{{tile.span.row}}"
-      md-colspan="{{tile.span.col}}"
-      md-colspan-sm="1"
-      ng-class="tile.background" >
-    <md-icon md-svg-icon="{{tile.icon}}"></md-icon>
-    <md-grid-tile-footer><h3>{{tile.title}}</h3></md-grid-tile-footer>
-  </md-grid-tile>
-</md-grid-list>
+<div plangular="https://soundcloud.com/twistoff-co/likes" flex>
+  <md-subheader layout="row" layout-sm="column" layout-align="space-between center" layout-wrap>
+
+    <h3 style="float:right; padding-right:4px; color:#4d9ed5; margin-right:auto; margin-left:auto;">{{ tracks[index || 0].user.username}} - {{tracks[index || 0].title}}</h3>
+    <md-button ng-click="previous()">Prev</md-button>
+    <md-button ng-click="playPause(index || 0)">Play</md-button>
+    <md-button ng-click="next()">Next</md-button>
+    <md-progress-linear flex style="z-index:1000;" ng-click="seek($event)" class="md-accent" md-mode="determinate" value="{{ (currentTime / duration) * 100 || 0 }}"></md-progress-linear>
+  </md-subheader>
+  <md-content class="md-background" layout="row" layout-align-gt-sm="center center" layout-sm="column" layout-wrap >
+    <md-card ng-repeat="track in tracks" style="height:400px;" layout="column" class="md-backgound md-hue-3" layout-align="center center" flex="25" flex-md="65" flex-sm="100">
+      <md-card-content layout="column" layout-align="center center" flex ng-style="{'background':'url({{ track.artwork_url }}) no-repeat', 'background-size': 'cover'}">
+        <h2 class="md-title" flex="10" style="color:#4d9ed5;">{{track.user.username}} - {{track.title}}</h2>
+        <div class="md-actions" flex layout="column" layout-align="center center">
+          <md-button class="md-fab md-accent"  style="z-index:0" ng-click="play($index)" aria-label="Use Android">
+            <md-icon class="material-icons md-light md-48">play_arrow</md-icon>
+          </md-button>
+        </div>
+      </md-card-content>
+    </md-card>
+  </md-content>
+</div>
+

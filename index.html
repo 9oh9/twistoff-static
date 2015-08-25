@@ -1,11 +1,12 @@
 <html lang="en" ng-app="twmj">
   <head>
-    <title>thiswasmyj.am</title>
+    <title>twistoff & friends</title>
     <base href="/">
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.9.4/angular-material.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Kalam:400,700"  type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Patua+One' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <meta name="viewport" content="initial-scale=1" />
     <script src="https://www.youtube.com/iframe_api"></script>
     <script src="/jspm_packages/system.js"></script>
@@ -15,12 +16,23 @@
     </script>
   </head>
   <body layout="column">
-    <md-toolbar class="md-hue-3 md-whiteframe-z1" >
-      <span style="font-family: 'Patua One', cursive;">
-        twistoff and friends
-      </span>
+    <md-toolbar class="md-hue-3 md-whiteframe-z1" layout="row" layout-align="center center">
+    <!--
+      <h3 style="font-family: 'Patua One', cursive;">
+        twistoff & friends
+      </h3>
+    -->
+      <h3 class="md-title" style="padding:4px;">
+        twistoff
+      </h3>
+      <h3 class="md-title" style="padding:4px; color:#4d9ed5;">
+        <b>&</b>
+      </h3>
+      <h3 class="md-title" style="padding:4px;">
+        friends
+      </h3>
     </md-toolbar>
-    <md-content class="" style="padding:15px; height:100%;" layout="column" flex ui-view>
+    <md-content class="" style="height:100%;" layout="row" layout-fill  ui-view>
 
     </md-content>
   </body>

@@ -24,6 +24,8 @@ System.config({
     "babel-runtime": "npm:babel-runtime@5.6.15",
     "brandly/angular-youtube-embed": "github:brandly/angular-youtube-embed@1.0.2",
     "core-js": "npm:core-js@0.9.18",
+    "jquery": "github:components/jquery@2.1.4",
+    "jxnblk/plangular": "github:jxnblk/plangular@3.1.2",
     "nineohnine/RestBot": "github:nineohnine/RestBot@master",
     "github:angular-ui/ui-router@0.2.15": {
       "angular": "github:angular/bower-angular@1.4.1"
