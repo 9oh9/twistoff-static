@@ -21,6 +21,7 @@
       "angular-material": "github:angular/bower-material@^0.10.0",
       "angular-ui-router": "github:angular-ui/ui-router@^0.2.15",
       "brandly/angular-youtube-embed": "github:brandly/angular-youtube-embed@^1.0.2",
+      "clean-css": "npm:clean-css@^3.3.9",
       "jquery": "github:components/jquery@^2.1.4",
       "jxnblk/plangular": "github:jxnblk/plangular@^3.1.2",
       "nineohnine/RestBot": "github:nineohnine/RestBot@master"

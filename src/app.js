@@ -1,7 +1,6 @@
 import angular from 'angular';
 import 'angular-ui-router';
 import ngMaterial from 'angular-material';
-import 'brandly/angular-youtube-embed';
 import 'jxnblk/plangular';
 import { HomeCtrl } from 'src/components/controllers'
 import { InstagramComponent } from 'src/components/services'
